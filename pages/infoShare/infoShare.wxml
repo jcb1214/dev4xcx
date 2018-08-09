@@ -1,10 +1,29 @@
 <!--pages/infoShare/infoShare.wxml-->
 <view class="container">
-    <view class="list">
-        <block wx:for="{{dataList}}" wx:key="id">
-          <view class="list-item">
-            <text>{{item.text}}</text>
+  <view class='search'>
+    <input type='text' confirm-type='search' bindblur='complete' bindconfirm='completeAndSearch'></input>
+    <button size='mini' type='primary' bindtap='search'>搜索</button>
+  </view>
+  <text hidden='{{!showTop10}}'>TOP10</text>
+  <text hidden='{{showTop10}}'>搜索结果</text>
+  <view class="list" wx:if="{{dataList.length > 0}}">
+      <block wx:for="{{dataList}}" wx:key="id">
+        <view class="list-item" bindtap='showDetail' data-index="{{index}}">
+          <text>{{item.text}}</text>
+          <view>
+            <image src='../../imgs/赞.svg' mode='aspectFit' style='width: 25px; height: 25px;'></image>
+            <text>{{item.goodNo}}</text>
           </view>
-        </block>
+          
+        </view>
+      </block>
+  </view>
+  <view wx:else>
+    <text>没有符合条件的结果</text>
+  </view>
+  <view class="add-click">
+       <navigator url='/pages/addInfo/addInfo' >
+        <image src='../../imgs/加.svg' mode='aspectFit' style='width: 50px; height: 50px;'></image>
+       </navigator >
     </view>
 </view>

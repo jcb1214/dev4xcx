@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/vote/vote",
-    "pages/infoShare/infoShare"
+    "pages/infoShare/infoShare",
+    "pages/addInfo/addInfo",
+    "pages/infoDetail/infoDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

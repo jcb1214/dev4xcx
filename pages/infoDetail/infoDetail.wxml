@@ -1,0 +1,2 @@
+<!--pages/infoDetail/infoDetail.wxml-->
+<text>显示  {{title}}  的详细信息</text>
