@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    dataList:[
+      { text: '班车时间表', id: 0 },
+      { text: '食堂菜单', id: 1 },
+      { text: '通讯录', id: 2 },
+      { text: '测试环境IP', id: 3 },
+    ]
   },
 
   /**

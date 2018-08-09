@@ -1,2 +1,10 @@
 <!--pages/infoShare/infoShare.wxml-->
-<text>pages/infoShare/infoShare.wxml</text>
+<view class="container">
+    <view class="list">
+        <block wx:for="{{dataList}}" wx:key="id">
+          <view class="list-item">
+            <text>{{item.text}}</text>
+          </view>
+        </block>
+    </view>
+</view>
