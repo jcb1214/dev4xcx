@@ -5,12 +5,47 @@
     "pages/vote/vote",
     "pages/infoShare/infoShare",
     "pages/addInfo/addInfo",
-    "pages/infoDetail/infoDetail"
+    "pages/infoDetail/infoDetail",
+    "pages/me/me"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Dev4小程序集中营",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor":"white",
+    "selectedColor":"blue",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"imgs/index.png",
+        "selectedIconPath":"imgs/index_select.png"
+      },
+      {
+        "pagePath": "pages/vote/vote",
+        "text": "投票",
+        "iconPath": "imgs/vote.png",
+        "selectedIconPath": "imgs/vote_select.png"
+      },
+      {
+        "pagePath": "pages/infoShare/infoShare",
+        "text": "信息共享",
+        "iconPath": "imgs/info.png",
+        "selectedIconPath": "imgs/info_select.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "imgs/me.png",
+        "selectedIconPath": "imgs/me_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
   }
 }
