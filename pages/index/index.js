@@ -17,13 +17,13 @@ Page({
   },
   //点击申报加班按钮
   getVotePage: function () {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../vote/vote'
     })
   },
   //点击查看加班按钮
   getInfoSharePage: function () {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../infoShare/infoShare'
     })
   },
