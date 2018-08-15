@@ -49,11 +49,6 @@
     │   │   └── resources
     │   │       └── application.properties
     │   └── test //测试包
-    │       └── java
-    │           └── com
-    │               └── dev4
-    │                   └── miniprogram
-    │                       └── MiniprogramApplicationTests.java
     └── target
 
 43 directories, 63 files
