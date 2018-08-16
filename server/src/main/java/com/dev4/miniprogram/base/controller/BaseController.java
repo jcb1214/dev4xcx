@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 
 /**
  * @version 1.0
@@ -31,12 +30,12 @@ public class BaseController {
         return "welcome";
     }
 
-//    @RequestMapping(value = "/api/*Controller",method = {RequestMethod.GET,RequestMethod.POST})
-//    public ControllerResponse miniprogram(HttpServletRequest request, @RequestBody ControllerRequest controllerRequest){
-//        log.info("---------------miniprogram start------------");
-//
-//        return new ControllerResponse(new HashMap<String,Object>());
-//
-//    }
+    @RequestMapping(value = "/api/TestController",method = {RequestMethod.GET,RequestMethod.POST})
+    public ControllerResponse test(HttpServletRequest request,@RequestBody ControllerRequest controllerRequest){
+        log.info("---------------test start------------");
+
+        return new ControllerResponse(controllerRequest.getReqBody().get("response"));
+
+    }
 
 }
