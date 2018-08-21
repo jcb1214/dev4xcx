@@ -1,13 +1,13 @@
-var baseRequest = (url,data,success,fail)=>{
+var baseRequest = (param)=>{
   wx.request({
-    url: url,
+    url: param.url,
     data: {
-      reqBody: data,
+      reqBody: param.data,
       reqHead: {}
     },
     method: 'POST',
-    success: res=>{success(res.data.rspBody)},
-    fail: fail
+    success: res=>{param.success(res.data.rspBody)},
+    fail: param.fail
   })
 }
 module.exports = { baseRequest }
