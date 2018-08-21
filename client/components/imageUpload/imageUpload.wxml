@@ -1,0 +1,13 @@
+<!--图片上传组件-->
+<view class='container'>
+  <block wx:for="{{tempFilePaths}}" wx:key="*this">
+    <view class='imgDiv'>
+      <image src="{{item}}" class='image-pre' data-src="{{item}}" bindtap='showImage'></image>
+      <image src='../../imgs/delete.png' class='delete' bindtap='deleteImage' data-index="{{index}}"></image>
+    </view>
+  </block>
+  <view class='imgDiv'>
+    <image src='../../imgs/image_upload.png' class='image-pre' bindtap='addImage'></image>
+  </view>
+</view>
+

@@ -9,16 +9,10 @@ Page({
       canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
     //点击申报加班按钮
-    getVotePage: function () {
-      wx.switchTab({
-          url: '../vote/vote'
-      })
-    },
-    //点击查看加班按钮
-    getInfoSharePage: function () {
-      wx.switchTab({
-          url: '../infoShare/infoShare'
-      })
+    test: function () {
+      var imageUpload = this.selectComponent("#imageUpload");
+
+      console.log(imageUpload.getUrls())
     },
     onLoad: function () {
       if (app.globalData.userInfo) {
